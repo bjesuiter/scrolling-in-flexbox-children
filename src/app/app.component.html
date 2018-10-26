@@ -1,26 +1,28 @@
-<section class="toolbar">
-  Toolbar
-</section>
+<mat-toolbar class="toolbar" color="accent">
+    Toolbar
+</mat-toolbar>
 
 <section class="content">
-  <div class="content-wrapper">
-    <section class="filter-area">
-      <label for="lineCount">Line Count</label>
-      <input id="lineCount" type="number" [(ngModel)]="lineCount">
-    </section>
+    <mat-card class="content-wrapper">
+        <section class="filter-area" color="primary">
+            <mat-form-field appearance="outline">
+                <mat-label>Line Count</mat-label>
+                <input matInput id="lineCount" type="number" [(ngModel)]="lineCount">
+            </mat-form-field>
+        </section>
 
-    <hr>
+        <mat-divider></mat-divider>
 
-    <section class="content-list">
-      <p *ngFor="let line of getLines(lineCount)">{{line}}</p>
-    </section>
-  </div>
+        <mat-list class="content-list">
+            <mat-list-item *ngFor="let line of getLines(lineCount)">{{line}}</mat-list-item>
+        </mat-list>
+    </mat-card>
 </section>
 
 <section class="conference-area">
-  Conference Area
+    Conference Area
 </section>
 
 <footer class="footer">
-  Footer
+    Footer
 </footer>

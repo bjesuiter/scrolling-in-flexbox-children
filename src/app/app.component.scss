@@ -20,34 +20,39 @@
   height: 100%;
 
   .content-wrapper {
-    background-color: #006b09;
-    padding: 8px;
-    height: 100%;
+    // margin only for mat-card style
+    margin: 8px 8px 0 8px;
+    // height should be 100 % when not using an element with outside margin
+    height: calc(100% - 16px);
     overflow: hidden;
 
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
+
+    mat-divider {
+      position: relative;
+    }
+
+    .filter-area {
+      min-height: 40px;
+      padding: 15px;
+    }
+
+    .content-list {
+      height: 0;
+
+      min-height: 0;
+
+      // 3. Step
+      overflow-y: auto;
+
+      // 2. Step
+      flex: 1 1 auto;
+
+    }
   }
 
-  .filter-area {
-   background-color: #cac8c859;
-    height: 40px;
-  }
-
-  .content-list {
-   background-color: #cac8c859;
-   height: 0;
-
-   min-height: 0;
-   
-   // 3. Step
-   overflow-y: auto;
-
-   // 2. Step
-   flex: 1 1 auto;
-
-  }
 }
 
 
