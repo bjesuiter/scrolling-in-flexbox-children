@@ -3,9 +3,9 @@
   display: grid;
 
   grid-template: 
-  "toolbar toolbar toolbar" 56px
+  "toolbar toolbar toolbar" 64px
   "content content sidebar" auto
-  "footer footer footer" 56px/ 1fr 1fr 46px
+  "footer footer footer" 64px/ 1fr 1fr 200px
 }
 
 .toolbar {
@@ -56,10 +56,22 @@
 }
 
 
-.conference-area {
+.sidebar {
   grid-area: sidebar;
-  background-color: #ababab;
-  overflow: hidden;
+  padding: 8px;
+
+  // This flexbox avoids collapsing margins or paddings at the top of this sidebar
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+
+  mat-list {
+    // make sidebar list scrollable
+    height: 0;
+    min-height: 0;
+    overflow-y: auto;
+    flex: 1 1 auto;
+  }
 }
 
 .footer {
