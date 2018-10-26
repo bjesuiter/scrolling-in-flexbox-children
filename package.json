@@ -1,0 +1,19 @@
+{
+  "name": "scrolling-in-flexbox-children",
+  "version": "0.0.1",
+  "description": "This repo accompanies a medium article on how make one children of a flexbox successfully scroll",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjesuiter/scrolling-in-flexbox-children.git"
+  },
+  "author": "Benjamin Jesuiter <bjesuiter@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bjesuiter/scrolling-in-flexbox-children/issues"
+  },
+  "homepage": "https://github.com/bjesuiter/scrolling-in-flexbox-children#readme"
+}
