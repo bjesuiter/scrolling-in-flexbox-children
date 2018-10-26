@@ -1,0 +1,26 @@
+<section class="toolbar">
+  Toolbar
+</section>
+
+<section class="content">
+  <div class="content-wrapper">
+    <section class="filter-area">
+      <label for="lineCount">Line Count</label>
+      <input id="lineCount" type="number" [(ngModel)]="lineCount">
+    </section>
+
+    <hr>
+
+    <section class="content-list">
+      <p *ngFor="let line of getLines(lineCount)">{{line}}</p>
+    </section>
+  </div>
+</section>
+
+<section class="conference-area">
+  Conference Area
+</section>
+
+<footer class="footer">
+  Footer
+</footer>

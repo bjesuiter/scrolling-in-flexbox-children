@@ -1,0 +1,64 @@
+:host {
+  height: 100%;
+  display: grid;
+
+  grid-template: 
+  "toolbar toolbar toolbar" 56px
+  "content content sidebar" auto
+  "footer footer footer" 56px/ 1fr 1fr 46px
+}
+
+.toolbar {
+  grid-area: toolbar;
+  background-color: #8f0303;
+}
+
+.content {
+  grid-area: content;
+  background-color: #8d8d8d;
+
+  height: 100%;
+
+  .content-wrapper {
+    background-color: #006b09;
+    padding: 8px;
+    height: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+  }
+
+  .filter-area {
+   background-color: #cac8c859;
+    height: 40px;
+  }
+
+  .content-list {
+   background-color: #cac8c859;
+   height: 0;
+
+   min-height: 0;
+   
+   // 3. Step
+   overflow-y: auto;
+
+   // 2. Step
+   flex: 1 1 auto;
+
+  }
+}
+
+
+.conference-area {
+  grid-area: sidebar;
+  background-color: #ababab;
+  overflow: hidden;
+}
+
+.footer {
+  grid-area: footer;
+  overflow: hidden;
+  background-color: #3f03ca;
+}
